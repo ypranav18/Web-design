@@ -1,0 +1,30 @@
+<html>
+<head>
+<title> Sq&cb lab</title>
+<script>
+function abc()
+{
+	var num=document.getElementById("num1").value;
+	if(isNaN(num))
+	{
+		alert("Enter Only Number")
+	}
+	else
+	{
+		document.write( "<table border=1> <tr> <th>Number</th> <th>Square</th> <th>Cube</th></tr>" );
+		for(var n=0; n<=num; n++)
+		{
+			document.write( "<tr><td>" + n + "</td><td>" + n*n + "</td><td>" + n*n*n + "</td></tr>" );
+		}
+ 		document.write( "</table>" );
+	}
+}
+</script>
+</head>
+<body>
+Enter the number:<input type=text id=num1 value="" />
+
+<input type=button onclick="abc()" value="Click" />
+</body>
+</html>
+	
