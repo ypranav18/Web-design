@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Simple Calculator </title>
+<style >
+body {margin: 30px;}
+</style>
+
+<script type="text/javascript">
+ function operate()
+{
+num1 = document.getElementById("x").value;
+num2 = document.getElementById("y").value; 
+var op=document.getElementById("op1").value;
+
+switch(op)
+ {
+ case '+':
+document.getElementById("result").innerHTML =num1 + num2; break;
+case '-':
+document.getElementById("result").innerHTML = num1 - num2; break;
+case '*':
+document.getElementById("result").innerHTML = num1 * num2; break;
+case '/':
+document.getElementById("result").innerHTML = num1/num2; break;
+default:
+document.write("Invalid Option <br> Choose proper option");
+}
+
+}
+</script>
+</head>
+<body>
+<form>
+1st Number : <input type="text" id="x" size="4" value="0"/><br><br>
+2nd Number: <input type="text" id="y" size="4" value="0"/><br><br> Enter the operation to be performed: <br>
+<select id="op1">
+<option value="+">Addition</option>
+<option value="-">Subtraction</option>
+<option value="*">Product</option>
+<option value="/">Quotient</option>
+</select>
+<input type="button" onclick="operate()" value="Submit"/>
+
+<input type="reset" value="clear"/>
+</form>
+<p>The Result is : <br></p>
+<p id = "result">
+</p>
+</body>
+</html>
+
